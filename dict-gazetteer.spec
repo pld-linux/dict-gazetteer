@@ -1,6 +1,6 @@
 %define		dictname gazetteer
-Summary:	U.S. Gazetteer
-Summary(pl):	S³ownik nazw geograficznych w USA
+Summary:	U.S. Gazetteer for dictd
+Summary(pl):	S³ownik nazw geograficznych w USA dla dictd
 Name:		dict-%{dictname}
 Version:	1.3
 Release:	3
@@ -37,8 +37,8 @@ Informacje o kodach pocztowych zosta³y po³±czone z nazwami miejsc.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/dictd/,%{_sysconfdir}/dictd}
-%{__make} install dictdir="$RPM_BUILD_ROOT%{_datadir}/dictd/"
+install -d $RPM_BUILD_ROOT{%{_datadir}/dictd,%{_sysconfdir}/dictd}
+%{__make} install dictdir=$RPM_BUILD_ROOT%{_datadir}/dictd
 
 dictprefix=%{_datadir}/dictd/%{dictname}
 echo "# U.S. Gazetteer
