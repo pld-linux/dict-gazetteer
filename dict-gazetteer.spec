@@ -29,7 +29,7 @@ Informacje o kodach pocztowych zosta³y po³±czone z nazwami miejsc.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make} db
 
