@@ -3,7 +3,7 @@ Summary:	U.S. Gazetteer for dictd
 Summary(pl):	S³ownik nazw geograficznych w USA dla dictd
 Name:		dict-%{dictname}
 Version:	1.3
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
