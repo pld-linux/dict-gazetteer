@@ -1,4 +1,4 @@
-%define         dictname gazetteer
+%define		dictname gazetteer
 Summary:	U.S. Gazetteer
 Summary(pl):	S³ownik nazw geograficznych w USA
 Name:		dict-%{dictname}
