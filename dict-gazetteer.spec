@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This package contains place names, population and location information
 provided by the U.S. Census Bureau, formatted for use by dictionary
-server in the dictd package. Zip Code information has ben merged with
+server in the dictd package. Zip Code information has been merged with
 the place name data.
 
 %description -l pl
