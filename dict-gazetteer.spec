@@ -3,10 +3,11 @@ Summary:	U.S. Gazetteer
 Summary(pl):	S³ownik nazw geograficznych w USA
 Name:		dict-%{dictname}
 Version:	1.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
+Patch0:		%{name}-linux-sparc.patch
 URL:		http://www.dict.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	dictzip
@@ -27,6 +28,7 @@ Informacje o kodach pocztowych zosta³y po³±czone z nazwami miejsc.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__autoconf}
