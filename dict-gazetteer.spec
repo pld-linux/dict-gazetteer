@@ -7,6 +7,7 @@ Release:	3
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
+# Source0-md5:	e87c468992693aebea7cbbd6261e45e2
 Patch0:		%{name}-linux-sparc.patch
 URL:		http://www.dict.org/
 BuildRequires:	autoconf
