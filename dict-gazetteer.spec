@@ -3,7 +3,7 @@ Summary:	U.S. Gazetteer
 Summary(pl):	S³ownik nazw geograficznych w USA
 Name:		dict-%{dictname}
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
