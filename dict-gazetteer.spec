@@ -1,6 +1,6 @@
 %define		dictname gazetteer
 Summary:	U.S. Gazetteer for dictd
-Summary(pl):	S≥ownik nazw geograficznych w USA dla dictd
+Summary(pl.UTF-8):   S≈Çownik nazw geograficznych w USA dla dictd
 Name:		dict-%{dictname}
 Version:	1.3
 Release:	6
@@ -23,10 +23,10 @@ provided by the U.S. Census Bureau, formatted for use by dictionary
 server in the dictd package. Zip Code information has been merged with
 the place name data.
 
-%description -l pl
-Pakiet zawiera nazwy miejsc, populacji i po≥oøenia dostarczane przez
+%description -l pl.UTF-8
+Pakiet zawiera nazwy miejsc, populacji i po≈Ço≈ºenia dostarczane przez
 U.S. Census Bureau, sformatowane do wykorzystania przez dictd.
-Informacje o kodach pocztowych zosta≥y po≥±czone z nazwami miejsc.
+Informacje o kodach pocztowych zosta≈Çy po≈ÇƒÖczone z nazwami miejsc.
 
 %prep
 %setup -q
