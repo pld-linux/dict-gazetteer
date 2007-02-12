@@ -1,6 +1,6 @@
 %define		dictname gazetteer
 Summary:	U.S. Gazetteer for dictd
-Summary(pl.UTF-8):   Słownik nazw geograficznych w USA dla dictd
+Summary(pl.UTF-8):	Słownik nazw geograficznych w USA dla dictd
 Name:		dict-%{dictname}
 Version:	1.3
 Release:	6
