@@ -3,7 +3,7 @@ Summary:	U.S. Gazetteer for dictd
 Summary(pl):	S³ownik nazw geograficznych w USA dla dictd
 Name:		dict-%{dictname}
 Version:	1.3
-Release:	6
+Release:	7
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -13,8 +13,9 @@ URL:		http://www.dict.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dictzip
-Requires:	dictd
+BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	%{_sysconfdir}/dictd
+Requires:	dictd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,16 +57,14 @@ database %{dictname} {
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2
-fi
+%service -q dictd restart
 
 %postun
-if [ -f /var/lock/subsys/dictd ]; then
-	/etc/rc.d/init.d/dictd restart 1>&2 || true
+if [ "$1" = 0 ]; then
+	%service -q dictd restart
 fi
 
 %files
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/dictd/%{dictname}.dictconf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/dictd/%{dictname}.dictconf
 %{_datadir}/dictd/%{dictname}.*
