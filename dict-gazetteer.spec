@@ -3,7 +3,7 @@ Summary:	U.S. Gazetteer for dictd
 Summary(pl.UTF-8):	Słownik nazw geograficznych w USA dla dictd
 Name:		dict-%{dictname}
 Version:	1.3
-Release:	10
+Release:	11
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	ftp://ftp.dict.org/pub/dict/%{name}-%{version}.tar.gz
@@ -37,7 +37,9 @@ Informacje o kodach pocztowych zostały połączone z nazwami miejsc.
 %build
 %{__autoconf}
 cp -f /usr/share/automake/config.* .
-%configure
+%configure \
+	--host=%{_host_cpu}-pld-linux \
+	--build=%{_host_cpu}-pld-linux
 %{__make} db
 
 %install
